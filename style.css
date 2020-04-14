@@ -1,3 +1,13 @@
 .main-body {
 	display: flex;
 }
+.images > img {
+	margin: 20px 20px 20px 20px;
+}
+body {
+	background-color: #f5efc9;
+}
+img {
+	margin: 20px 20px 20px 20px;
+}
+
