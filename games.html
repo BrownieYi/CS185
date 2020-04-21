@@ -6,20 +6,21 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<button onclick="topFunction()" id="topBut" title="Go up">Top</button>
 		<div>
 			<h1>Games</h1>
 		</div>
 		<div class="nav-bar">
-			<div>
+			<div class= "bar">
 				<a href="index.html">Home</a>
 			</div>
-			<div>
+			<div class="bar">
 				<a href="images.html">Images</a>
 			</div>
-			<div>
+			<div class="bar active">
 				<a href="games.html">Games</a>
 			</div>
-			<div>
+			<div class="bar">
 				<a href="videos.html">Videos</a>
 			</div>
 		</div>
@@ -30,27 +31,54 @@
 				</p>
 			</div>
 			<div>
-				<div>
-					<div class="images">
+				<div class="games">
+					<div>
 						<a href="https://na.leagueoflegends.com/en-us/"><img src="image/league.jpg"></a>
-						<span>League of Legends (including TFT)</span>
+					</div>
+					<div>
+						<p>
+						League of Legends (including TFT)
+						</p>
 					</div>
 				</div>
 
-				<div>
-					<div class="images">
+				<div class="games">
+					<div>
 						<a href="https://www.sekirothegame.com"><img src="image/sekiro.jpg"></a>
-						<span>Sekiro: Shadow Die Twice</span>
+					</div>
+					<div>
+						<p>
+						Sekiro: Shadow Die Twice
+						</p>
 					</div>
 				</div>
 
-				<div>
-					<div class="images">
+				<div class="games">
+					<div>
 						<a href="https://www.monsterhunterworld.com/us/"><img src="image/mhw.jpg"></a>
-						<span>Monster Hunter World</span>
+					</div>
+					<div>
+						<p>
+						Monster Hunter World
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var topbutton = document.getElementById("topBut");
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction(){
+				if(document.documentElement.scrollTop > document.documentElement.clientHeight/4){
+					topbutton.style.display = "block";
+				}else{
+					topbutton.style.display = "none";
+				}
+			}
+
+			function topFunction() {
+				document.documentElement.scrollTop=0;
+			}
+		</script>
 	</body>
 </html>

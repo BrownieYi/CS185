@@ -5,20 +5,21 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<button onclick="topFunction()" id="topBut" title="Go up">Top</button>
 		<div>
 			<h1>Welcome to My Website!</h1>
 		</div>
 		<div class="nav-bar">
-			<div>
+			<div class="bar active">
 				<a href="index.html">Home</a>
 			</div>
-			<div>
+			<div class="bar">
 				<a href="images.html">Images</a>
 			</div>
-			<div>
+			<div class="bar">
 				<a href="games.html">Games</a>
 			</div>
-			<div>
+			<div class="bar">
 				<a href="videos.html">Videos</a>
 			</div>
 		</div>
@@ -26,12 +27,27 @@
 			<div>
 				<img src="image/image.jfif">
 			</div>
-			<div>
+			<div class = "intro">
 				<p>
-				Hi, my name is Mingyu Xie, I was born in June 1st, 2000 and I am from Wuhan, China. I am a second year Computer Science major undergraduate of UCSB.
+				Hi, my name is Mingyu Xie, I was born in June 1st, 2000 and I am from Wuhan, China. I am a second year Computer Science major undergraduate of UCSB. This quarter I am taking CS 48, CS 130A, CS 138 and CS 185.
 				</p>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var topbutton = document.getElementById("topBut");
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction(){
+				if(document.documentElement.scrollTop > document.documentElement.clientHeight/4){
+					topbutton.style.display = "block";
+				}else{
+					topbutton.style.display = "none";
+				}
+			}
+
+			function topFunction() {
+				document.documentElement.scrollTop=0;
+			}
+		</script>
 	</body>
 </html>
 
